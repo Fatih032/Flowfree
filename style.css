@@ -1,0 +1,67 @@
+/* styles/style.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+#game-container {
+    display: grid;
+    border: 2px solid #333;
+    background-color: #fff;
+    max-width: 90vw;
+    max-height: 90vh;
+    aspect-ratio: 1 / 1;
+    width: min(90vw, 90vh);
+    height: min(90vw, 90vh);
+    min-width: 300px; /* Küçük ekranlarda çok küçülmeyi önler */
+    min-height: 300px;
+}
+
+.grid-cell {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none; /* Safari için */
+    touch-action: manipulation; /* Dokunmatik olayları optimize eder */
+}
+
+.point {
+    border-radius: 50%;
+    border: 2px solid;
+    box-sizing: border-box;
+    width: 24px; /* Sabit piksel boyutu */
+    height: 24px;
+    margin: auto; /* Ekstra hizalama */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.path-color-0 { background-color: #ADD8E6; } /* Açık Mavi */
+.path-color-1 { background-color: #FFC0CB; } /* Açık Pembe */
+.path-color-2 { background-color: #90EE90; } /* Açık Yeşil */
+.path-color-3 { background-color: #FFDAB9; } /* Şeftali rengi */
+.path-color-4 { background-color: #B0E0E6; } /* Pudra Mavisi */
+
+.point-color-0 { background-color: blue; border-color: darkblue; }
+.point-color-1 { background-color: deeppink; border-color: mediumvioletred; }
+.point-color-2 { background-color: green; border-color: darkgreen; }
+.point-color-3 { background-color: orange; border-color: darkorange; }
+.point-color-4 { background-color: purple; border-color: darkpurple; }
+
+#score-display {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+}
